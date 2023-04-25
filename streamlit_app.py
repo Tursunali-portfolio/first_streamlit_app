@@ -19,4 +19,4 @@ streamlit.dataframe(sweatsuit_list.index)
 
 selected_suit = streamlit.selectbox('Pick a sweatsuit color or style:', sweatsuit_list.index)
 
-streamlit.text(selected_suit)
+streamlit.text(sweatsuit_list.loc[selected_suit])
