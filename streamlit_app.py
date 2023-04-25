@@ -28,3 +28,7 @@ response = requests.get(url)
 image = Image.open(BytesIO(response.content))
 
 streamlit.image(image=image)
+
+streamlit.write('Price: ', df.PRICE)
+streamlit.write('Sizes Available: ', df.SIZE_LIST)
+streamlit.write(df.UPSELL_PRODUCT_DESC)
