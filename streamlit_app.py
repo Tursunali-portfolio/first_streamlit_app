@@ -19,7 +19,9 @@ streamlit.dataframe(sweatsuit_list.index)
 
 selected_suit = streamlit.selectbox('Pick a sweatsuit color or style:', sweatsuit_list.index)
 
-url = selected_suit["DIRECT_URL"]
+df= sweatsuit_list.loc[selected_suit]
+
+url = df.DIRECT_URL
 
 response = requests.get(url)
 
