@@ -15,6 +15,8 @@ with conn.cursor() as cursor:
 
 sweatsuit_list = data.set_index('COLOR_OR_STYLE')
 
-selected_suits = streamlit.select_slider('Pick a sweatsuit color or style:', list(sweatsuit_list), ["Pink"])
+streamlit.dataframe(sweatsuit_list)
 
-streamlit.dataframe(sweatsuit_list.loc[selected_suits])
+# selected_suits = streamlit.select_slider('Pick a sweatsuit color or style:', list(sweatsuit_list), ["Pink"])
+
+# streamlit.dataframe(sweatsuit_list.loc[selected_suits])
