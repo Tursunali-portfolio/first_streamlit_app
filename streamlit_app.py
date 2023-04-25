@@ -17,6 +17,6 @@ sweatsuit_list = data.set_index('COLOR_OR_STYLE')
 
 streamlit.dataframe(sweatsuit_list.index)
 
-selected_suits = streamlit.selectbox('Pick a sweatsuit color or style:', tuple(sweatsuit_list.index), ["Pink"])
+selected_suits = streamlit.selectbox('Pick a sweatsuit color or style:', tuple(sweatsuit_list.index), ("Pink",))
 
 # streamlit.dataframe(sweatsuit_list.loc[selected_suits])
